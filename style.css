@@ -357,22 +357,8 @@ option {
     display: none;
   }
 
-  .step-number {
-    width: 35px;
-    height: 35px;
-    font-size: 16px;
-  }
-
-  .step-title {
-    font-size: 15px;
-  }
-
-  .step-description {
-    font-size: 13px;
-  }
-
   .right {
-    padding: 70px 15px 30px 15px;
+    padding: 30px 35px 30px 35px;
   }
 
   .right .step-one-of h1 {
