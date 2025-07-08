@@ -20,11 +20,11 @@
   <body>
     <div class="container">
       <div class="left">
-        <img src="Logo.svg" alt="" />
+        <img src="Logo.svg" alt="Junior Bible School Logo" />
 
         <div class="steps">
           <div class="step">
-            <div class="step-number active">1</div>
+            <div class="step-number active" data-step="1">1</div>
             <div class="step-content">
               <h3 class="step-title">Age Group</h3>
               <p class="step-description">
@@ -35,7 +35,7 @@
           </div>
 
           <div class="step">
-            <div class="step-number">2</div>
+            <div class="step-number" data-step="2">2</div>
             <div class="step-content">
               <h3 class="step-title">Personal Details</h3>
               <p class="step-description">
@@ -46,7 +46,7 @@
           </div>
 
           <div class="step">
-            <div class="step-number">3</div>
+            <div class="step-number" data-step="3">3</div>
             <div class="step-content">
               <h3 class="step-title">Faith and Church Details</h3>
               <p class="step-description">
@@ -57,7 +57,7 @@
           </div>
 
           <div class="step">
-            <div class="step-number">4</div>
+            <div class="step-number" data-step="4">4</div>
             <div class="step-content">
               <h3 class="step-title">Consent and Declaration</h3>
               <p class="step-description">
@@ -69,13 +69,11 @@
           </div>
 
           <div class="step">
-            <div class="step-number">5</div>
+            <div class="step-number" data-step="5">5</div>
             <div class="step-content">
               <h3 class="step-title">Payment</h3>
               <p class="step-description">
-                A parent or guardian must give permission for your
-                participation. You'll also confirm that all the information
-                you've provided is accurate.
+                Complete the payment process to finalize your registration.
               </p>
             </div>
           </div>
@@ -83,88 +81,322 @@
       </div>
 
       <!-- Right Part -->
-
       <div class="right">
-        <div class="step-one-of">
-          <h3>STEP 1 OF 4</h3>
-          <h1>Age Group</h1>
-          <h4>
-            Please select your age group to help us place you in the appropriate
-            category.
-          </h4>
-        </div>
-        <div class="inputs">
-          <div class="form-container">
-            <form>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="surname">Last Name*</label>
-                  <input type="text" id="last-name" name="last-name" required />
-                </div>
-                <div class="form-group">
-                  <label for="first-name">First Name*</label>
-                  <input
-                    type="text"
-                    id="first-name"
-                    name="first-name"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="middle-name">Middle Name</label>
-                  <input type="text" id="middle-name" name="middle-name" />
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="birth-date">Date of Birth*</label>
-
-                  <input
-                    type="date"
-                    id="birth-date"
-                    name="birth-date"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="gender">Gender*</label>
-                  <select id="gender" name="gender" required>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                  </select>
+        <form id="signup-form">
+          <!-- Step 1: Age Group -->
+          <div class="form-step active" id="step-1">
+            <div class="step-one-of">
+              <h3>STEP 1 OF 5</h3>
+              <h1>Age Group</h1>
+              <h4>
+                Please select your age group to help us place you in the
+                appropriate category.
+              </h4>
+            </div>
+            <div class="inputs">
+              <div class="form-container">
+                <div class="form-row">
+                  <div class="form-group">
+                    <div class="form-group">
+                      <label for="age-group">Age Group*</label>
+                      <div class="age-group-boxes">
+                        <div class="age-box" data-value="10-12">
+                          <div class="age-level">Basic</div>
+                          <div class="age-range">10-12 Years</div>
+                        </div>
+                        <div class="age-box" data-value="13-14">
+                          <div class="age-level">Advanced</div>
+                          <div class="age-range">13-14 Years</div>
+                        </div>
+                        <div class="age-box" data-value="15">
+                          <div class="age-level">Advanced</div>
+                          <div class="age-range">15 Years</div>
+                        </div>
+                      </div>
+                      <input
+                        type="hidden"
+                        id="age-group"
+                        name="age-group"
+                        required
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              <div class="form-row">
-                <div class="form-group full-width">
-                  <label for="home-address">Home Address*</label>
-                  <input
-                    type="text"
-                    id="home-address"
-                    name="home-address"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group full-width">
-                  <label for="phone-number">Phone Number*</label>
-                  <input
-                    type="text"
-                    id="phone-number"
-                    name="phone-number"
-                    required
-                  />
-                </div>
-              </div>
-            </form>
+            </div>
+            <div class="buttons">
+              <button type="button" class="back-button" disabled>
+                <i class="fa-solid fa-arrow-left"></i> Back
+              </button>
+              <button type="button" class="next-button">
+                Next <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="buttons"></div>
+
+          <!-- Step 2: Personal Details -->
+          <div class="form-step" id="step-2">
+            <div class="step-one-of">
+              <h3>STEP 2 OF 5</h3>
+              <h1>Personal Details</h1>
+              <h4>
+                Fill in your basic personal information so we can get to know
+                you better and keep in touch if needed.
+              </h4>
+            </div>
+            <div class="inputs">
+              <div class="form-container">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="last-name">Surname*</label>
+                    <input type="text" id="surname" name="surname" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="first-name">First Name*</label>
+                    <input
+                      type="text"
+                      id="first-name"
+                      name="first-name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="middle-name">Middle Name</label>
+                    <input type="text" id="middle-name" name="middle-name" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="birth-date">Date of Birth*</label>
+                    <input
+                      type="date"
+                      id="birth-date"
+                      name="birth-date"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="gender">Gender*</label>
+                    <select id="gender" name="gender" required>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group full-width">
+                    <label for="home-address">Home Address*</label>
+                    <input
+                      type="text"
+                      id="home-address"
+                      name="home-address"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group full-width">
+                    <label for="phone-number">Phone Number*</label>
+                    <input
+                      type="tel"
+                      id="phone-number"
+                      name="phone-number"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <button type="button" class="back-button">
+                <i class="fa-solid fa-arrow-left"></i> Back
+              </button>
+              <button type="button" class="next-button">
+                Next <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3: Faith and Church Details -->
+          <div class="form-step" id="step-3">
+            <div class="step-one-of">
+              <h3>STEP 3 OF 5</h3>
+              <h1>Faith and Church Details</h1>
+              <h4>
+                Tell us about your faith and church background. This helps us
+                support your spiritual growth.
+              </h4>
+            </div>
+            <div class="inputs">
+              <div class="form-container">
+                <!-- Religion Field -->
+                <div class="form-row">
+                  <div class="form-group full-width">
+                    <label for="religion">Religion*</label>
+                    <input
+                      type="text"
+                      id="religion"
+                      name="religion"
+                      value="Christian"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Born Again Question -->
+                <div class="form-row">
+                  <div class="form-group full-width">
+                    <label>Are you born again?*</label>
+                    <div class="radio-group">
+                      <label class="radio-option" for="born-again-yes">
+                        <input
+                          type="radio"
+                          id="born-again-yes"
+                          name="born-again"
+                          value="yes"
+                          required
+                        />
+                        <span class="radio-custom"></span>
+                        Yes
+                      </label>
+                      <label class="radio-option" for="born-again-no">
+                        <input
+                          type="radio"
+                          id="born-again-no"
+                          name="born-again"
+                          value="no"
+                          required
+                        />
+                        <span class="radio-custom"></span>
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- Church Name and Address -->
+                <div class="form-row">
+                  <div class="form-group full-width">
+                    <label for="church-name-address"
+                      >Name and Address of Church</label
+                    >
+                    <input
+                      type="text"
+                      id="church-name-address"
+                      name="church-name-address"
+                    />
+                  </div>
+                </div>
+
+                <!-- Zone -->
+                <div class="form-row">
+                  <div class="form-group full-width">
+                    <label for="zone">Zone</label>
+                    <input type="text" id="zone" name="zone" />
+                  </div>
+                </div>
+
+                <!-- Area -->
+                <div class="form-row">
+                  <div class="form-group full-width">
+                    <label for="area">Area</label>
+                    <input type="text" id="area" name="area" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <button type="button" class="back-button">
+                <i class="fa-solid fa-arrow-left"></i> Back
+              </button>
+              <button type="button" class="next-button">
+                Next <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <!-- Step 4: Consent and Declaration -->
+          <div class="form-step" id="step-4">
+            <div class="step-one-of">
+              <h3>STEP 4 OF 5</h3>
+              <h1>Consent and Declaration</h1>
+              <h4>
+                A parent or guardian must give permission for your
+                participation. You'll also confirm that all the information
+                you've provided is accurate.
+              </h4>
+            </div>
+            <div class="inputs">
+              <div class="form-container">
+                <div class="form-row">
+                  <div class="form-group full-width">
+                    <label for="parent-name">Parent/Guardian Name*</label>
+                    <input
+                      type="text"
+                      id="parent-name"
+                      name="parent-name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group full-width">
+                    <label for="parent-consent">
+                      <input
+                        type="checkbox"
+                        id="parent-consent"
+                        name="parent-consent"
+                        required
+                      />
+                      I confirm parental consent for participation
+                    </label>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group full-width">
+                    <label for="declaration">
+                      <input
+                        type="checkbox"
+                        id="declaration"
+                        name="declaration"
+                        required
+                      />
+                      I declare all information provided is accurate
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <button type="button" class="back-button">
+                <i class="fa-solid fa-arrow-left"></i> Back
+              </button>
+              <button type="button" class="next-button">
+                Next <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 5: Payment -->
+          <div class="form-step" id="step-5">
+            <div class="step-one-of">
+              <h3>STEP 5 OF 5</h3>
+              <h1>Payment</h1>
+              <h4>
+                Complete the payment process to finalize your registration.
+              </h4>
+            </div>
+
+            <div class="buttons">
+              <button type="button" class="back-button">
+                <i class="fa-solid fa-arrow-left"></i> Back
+              </button>
+              <button type="submit" class="next-button">
+                Continue to payment<i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
