@@ -484,7 +484,6 @@ option {
   }
 
   .right {
-    padding: 80px 20px 40px 20px;
   }
 
   .right .step-one-of h1 {
@@ -492,7 +491,7 @@ option {
   }
 
   .right .step-one-of h4 {
-    max-width: none;
+    max-width: 300px;
   }
    .age-group-boxes {
     flex-direction: column;
