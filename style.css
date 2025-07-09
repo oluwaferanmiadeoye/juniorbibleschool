@@ -263,7 +263,6 @@ option {
 .age-box.selected {
   border-color: #14213d;
   background-color: #14213d;
-
 }
 
 .age-level {
@@ -291,7 +290,6 @@ option {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-
 }
 
 .back-button,
@@ -375,7 +373,7 @@ option {
 }
 
 #step-3 .radio-option input[type="radio"]:checked + .radio-custom::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -395,7 +393,8 @@ option {
 }
 
 /* Optional: Reset any unwanted parent styles */
-.form-row, .form-group {
+.form-row,
+.form-group {
   background-color: transparent !important;
   padding: 0 !important;
 }
@@ -442,66 +441,72 @@ option {
     padding: 40px 15px;
   }
 
-  .right {
-    padding: 80px 0 0 0;
-  }
-
-  .right .step-one-of h1 {
-    font-size: 28px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    display: flex;
-    gap: 0;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
-
-  .left {
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin-top: 30px;
-    width: 100%;
-  }
-
-  .steps {
-    display: none;
-  }
-
   .left img {
-    width: 100%;
-    height: 80px;
+    width: 350px;
+    height: 60px;
     align-self: center;
     display: flex;
-    justify-self: center;
+
+    .right {
+      padding: 80px 0 0 0;
+    }
+
+    .right .step-one-of h1 {
+      font-size: 28px;
+    }
   }
 
-  .right {
-  }
+  @media screen and (max-width: 1000px) {
+    .container {
+      flex-direction: column;
+      display: flex;
+      gap: 0;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
 
-  .right .step-one-of h1 {
-    font-size: 24px;
-  }
+    .left {
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin-top: 30px;
+      width: 100%;
+    }
 
-  .right .step-one-of h4 {
-    max-width: 300px;
+    .steps {
+      display: none;
+    }
+
+    .left img {
+      width: 100%;
+      height: 80px;
+      align-self: center;
+      display: flex;
+      justify-self: center;
+    }
+
+    .right {
+    }
+
+    .right .step-one-of h1 {
+      font-size: 24px;
+    }
+
+    .right .step-one-of h4 {
+      max-width: 300px;
+    }
+    .age-group-boxes {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .age-box {
+      padding: 15px;
+    }
   }
-   .age-group-boxes {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .age-box {
-    padding: 15px;
-  }
-}
 }
 
 @media screen and (max-width: 640px) {
@@ -542,6 +547,7 @@ option {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 20px;
   }
 
   .left img {
@@ -553,12 +559,11 @@ option {
   }
 
   .steps {
-    padding: 20px 15px;
     display: none;
   }
 
   .right {
-    padding: 30px 35px 30px 35px;
+    padding: 30px 0px 30px 0px;
   }
 
   .right .step-one-of h1 {
